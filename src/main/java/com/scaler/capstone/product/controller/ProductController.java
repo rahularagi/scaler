@@ -4,6 +4,8 @@ import com.scaler.capstone.product.dto.FakeStoreProductDto;
 import com.scaler.capstone.product.models.Product;
 import com.scaler.capstone.product.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,19 +13,19 @@ import java.util.List;
 @RestController
 @RequestMapping("/products")
 public class ProductController {
-    private ProductService productService;
+    private ProductService productService; int a =1/0;
     @Autowired
     public ProductController(ProductService productService){
         this.productService = productService;
     }
 
     @GetMapping("/")
-    public List<Product> getAllProducts(){
-        return productService.getAllProducts();
+    public ResponseEntity<List<Product>> getAllProducts(){
+        return new ResponseEntity<>(productService.getAllProducts(), HttpStatus.OK);
     }
+
     @GetMapping("/{id}")
     public Product getSingleProduct(@PathVariable("id") long id){
-
         return productService.getSingleProduct(id);
     }
 
