@@ -15,4 +15,10 @@ Object Relational mapping
 
 JPA -> Java persistence API
 
-JPA
+Interface<JPA> --> Hibernate to--> JDBC
+
+
+Repository pattern
+  * Code to interact with persistence layer should separate from business logic
+  * service --> intermediate(Repository layer) --> Database
+
