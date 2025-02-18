@@ -1,4 +1,4 @@
-package com.scaler.capstone.product.controlleradvices;
+package com.scaler.capstone.fakestore.product.controlleradvices;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

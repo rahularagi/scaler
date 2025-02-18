@@ -1,4 +1,4 @@
-package com.scaler.capstone.product.config;
+package com.scaler.capstone.fakestore.product.config;
 
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;

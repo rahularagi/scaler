@@ -1,4 +1,4 @@
-package com.scaler.capstone.product.controller;
+package com.scaler.capstone.fakestore.product.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

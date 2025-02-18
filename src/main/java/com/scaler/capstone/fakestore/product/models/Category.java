@@ -1,4 +1,4 @@
-package com.scaler.capstone.product.models;
+package com.scaler.capstone.fakestore.product.models;
 
 import lombok.Getter;
 import lombok.Setter;

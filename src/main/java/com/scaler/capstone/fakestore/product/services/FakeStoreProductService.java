@@ -1,8 +1,8 @@
-package com.scaler.capstone.product.services;
+package com.scaler.capstone.fakestore.product.services;
 
-import com.scaler.capstone.product.dto.FakeStoreProductDto;
-import com.scaler.capstone.product.models.Category;
-import com.scaler.capstone.product.models.Product;
+import com.scaler.capstone.fakestore.product.dto.FakeStoreProductDto;
+import com.scaler.capstone.fakestore.product.models.Category;
+import com.scaler.capstone.fakestore.product.models.Product;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,7 @@
-package com.scaler.capstone.product.services;
+package com.scaler.capstone.fakestore.product.services;
 
-import com.scaler.capstone.product.dto.FakeStoreProductDto;
-import com.scaler.capstone.product.models.Product;
+import com.scaler.capstone.fakestore.product.dto.FakeStoreProductDto;
+import com.scaler.capstone.fakestore.product.models.Product;
 
 import java.util.List;
 
