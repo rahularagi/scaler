@@ -56,3 +56,16 @@ private Category category;
 private String description;
 private String imageUrl;
 }
+
+
+
+Query handling
+* Declared queries 
+  * * No need to write any SQL yourself
+  * * just need to write a method name
+  * * ORM will create Query based on method Name
+
+C - create data
+R - read data
+U - update data
+D - delete data
