@@ -1,4 +1,4 @@
-package com.scaler.capstone.database.inheritance.joinedtable;
+package com.scaler.capstone.database.inheritance.entities.joinedtable;
 
 import jakarta.persistence.*;
 import lombok.Getter;

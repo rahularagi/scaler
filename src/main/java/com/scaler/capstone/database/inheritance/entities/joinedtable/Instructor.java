@@ -1,4 +1,4 @@
-package com.scaler.capstone.database.inheritance.joinedtable;
+package com.scaler.capstone.database.inheritance.entities.joinedtable;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -8,10 +8,10 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@Entity(name = "jt_mentor")
+@Entity(name = "jt_instructor")
 @PrimaryKeyJoinColumn(name = "user_id")
-public class Mentor extends User{
+public class Instructor extends User {
     @Id
     private Long id;
-    private double averageRating;
+    private String favouriteStudent;
 }

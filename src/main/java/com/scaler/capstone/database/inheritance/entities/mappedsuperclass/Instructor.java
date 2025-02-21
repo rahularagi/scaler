@@ -1,4 +1,4 @@
-package com.scaler.capstone.database.inheritance.mappedsuperclass;
+package com.scaler.capstone.database.inheritance.entities.mappedsuperclass;
 
 import jakarta.persistence.Entity;
 import lombok.Getter;

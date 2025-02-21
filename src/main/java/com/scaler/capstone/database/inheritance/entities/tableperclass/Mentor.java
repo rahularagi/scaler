@@ -1,14 +1,15 @@
-package com.scaler.capstone.database.inheritance.singleclass;
+package com.scaler.capstone.database.inheritance.entities.tableperclass;
 
-import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-@DiscriminatorValue(value = "1")
-@Entity
+@Entity(name = "tpc_mentor")
 public class Mentor extends User {
+    @Id
+    private Long id;
     private double averageRating;
 }

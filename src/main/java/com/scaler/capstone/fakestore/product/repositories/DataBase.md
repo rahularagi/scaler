@@ -1,71 +1,90 @@
-Introduction to spring data JPA
---
-* ORM
-* JPA
-* Hibernate
-* Jdbc
+# Introduction to Spring Data JPA
 
-* ORM
-Object Relational mapping
- ORM library 
-* Hibernate
-* MyBatis
-* Joog
+## ORM
 
+- ORM
+- JPA
+- Hibernate
+- JDBC
 
-JPA -> Java persistence API
+### ORM
 
-Interface<JPA> --> Hibernate to--> JDBC
+Object Relational Mapping (ORM) library:
 
+- Hibernate
+- MyBatis
+- Joog
 
-Repository pattern
-  * Code to interact with persistence layer should separate from business logic
-  * service --> intermediate(Repository layer) --> Database
+## JPA
 
+Java Persistence API (JPA)
+
+```
+Interface<JPA> --> Hibernate --> JDBC
+```
+
+## Repository Pattern
+
+- Code to interact with the persistence layer should be separate from business logic.
+- Service --> Intermediate (Repository Layer) --> Database
+
+## Example Entities
+
+```java
 @Getter
 @Setter
 @MappedSuperclass
 public class BaseModel {
-@Id
-private Long id;
-private Date createdAt;
-private Date lastUpdatedAt;
-private boolean isDeleted;
+    @Id
+    private Long id;
+    private Date createdAt;
+    private Date lastUpdatedAt;
+    private boolean isDeleted;
 }
+```
 
-
+```java
 @Getter
 @Setter
 @Entity
-public class Category extends BaseModel{
-@Id
-private Long id;
-private String name;
+public class Category extends BaseModel {
+    @Id
+    private Long id;
+    private String name;
 }
+```
 
+```java
 @Getter
 @Setter
 @Entity
-public class Product extends BaseModel{
-@Id
-private Long id;
-private String title;
-private double price;
-@ManyToOne
-private Category category;
-private String description;
-private String imageUrl;
+public class Product extends BaseModel {
+    @Id
+    private Long id;
+    private String title;
+    private double price;
+    @ManyToOne
+    private Category category;
+    private String description;
+    private String imageUrl;
 }
+```
+
+## Query Handling
+
+- **Declared Queries**
+    - No need to write any SQL yourself
+    - Just need to write a method name
+    - ORM will create queries based on method names
+
+### CRUD Operations
+
+- **C** - Create data
+- **R** - Read data
+- **U** - Update data
+- **D** - Delete data
+
+i need file format
 
 
 
-Query handling
-* Declared queries 
-  * * No need to write any SQL yourself
-  * * just need to write a method name
-  * * ORM will create Query based on method Name
-
-C - create data
-R - read data
-U - update data
-D - delete data

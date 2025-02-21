@@ -1,4 +1,4 @@
-package com.scaler.capstone.database.inheritance.tableperclass;
+package com.scaler.capstone.database.inheritance.entities.tableperclass;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

@@ -1,15 +1,12 @@
-package com.scaler.capstone.database.inheritance.tableperclass;
+package com.scaler.capstone.database.inheritance.entities.mappedsuperclass;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-@Entity(name = "tpc_mentor")
+@Entity(name = "ms_mentor")
 public class Mentor extends User {
-    @Id
-    private Long id;
     private double averageRating;
 }

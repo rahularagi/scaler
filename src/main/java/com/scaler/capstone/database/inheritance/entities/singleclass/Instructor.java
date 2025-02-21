@@ -1,4 +1,4 @@
-package com.scaler.capstone.database.inheritance.singleclass;
+package com.scaler.capstone.database.inheritance.entities.singleclass;
 
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
