@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class SelfProductController {
 
     ProductService productService;
+    //ToDo : Need implement all other fakestore apis flow to database 7 apis
 
     public SelfProductController(@Qualifier("selfProductService") ProductService productService){
         this.productService = productService;

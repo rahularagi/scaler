@@ -77,6 +77,15 @@ public class Product extends BaseModel {
     - Just need to write a method name
     - ORM will create queries based on method names
 
+- **HQL Queries**
+  - HQL --> Hibernate query language
+  - it comes in mid of SQL and Object oriented programming
+  - loose coupling
+
+- **Native Queries**
+  - Need to use actual table name and column names
+  - Tightly coupled
+
 ### CRUD Operations
 
 - **C** - Create data
@@ -84,7 +93,6 @@ public class Product extends BaseModel {
 - **U** - Update data
 - **D** - Delete data
 
-i need file format
 
 
 
