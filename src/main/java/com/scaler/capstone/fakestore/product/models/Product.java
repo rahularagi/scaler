@@ -13,8 +13,7 @@ public class Product{
     private Long id;
     private String title;
     private double price;
-    @ManyToOne
-//    @JoinColumn(name="id")
+    @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
     private Category category;
     private String description;
     private String imageUrl;

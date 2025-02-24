@@ -69,6 +69,23 @@ public class Product extends BaseModel {
     private String imageUrl;
 }
 ```
+```
+List of relations
+Schema |      Name      | Type  | Owner
+--------+----------------+-------+-------
+public | category       | table | rahul
+public | jt_instructor  | table | rahul
+public | jt_mentor      | table | rahul
+public | jt_user        | table | rahul
+public | ms_instructor  | table | rahul
+public | ms_mentor      | table | rahul
+public | product        | table | rahul
+public | st_user        | table | rahul
+public | tpc_instructor | table | rahul
+public | tpc_mentor     | table | rahul
+public | tpc_user       | table | rahul
+
+```
 
 ## Query Handling
 
@@ -94,5 +111,22 @@ public class Product extends BaseModel {
 - **D** - Delete data
 
 
+## Representing cardinalities
+
+- **Mapped By**
+  - 1:1  @OneToOne
+  - 1:m  @OneToMany
+  - m:1  @ManyToOne
+  - m:m  @ManyToMany
+  - show seat : ticket--> 1:1
+  
+- **CascadeType**
+  - No need to save joined table entities separately while saving
+  - ```@ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE})```
 
 
+## Fetch Type
+  - 2 ways to fetch attributes of child class
+  - Eager fetch --> fetch the attributes along with main object
+  - Lazy fetch  --> Don't fetch the object attributes while fetching the main object
+  - 
