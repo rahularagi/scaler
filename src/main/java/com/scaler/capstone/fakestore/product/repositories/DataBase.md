@@ -131,3 +131,26 @@ public | tpc_user       | table | rahul
   - Lazy fetch  --> Don't fetch the object attributes while fetching the main object
   - @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE},fetch = FetchType.EAGER)
   - @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE},fetch = FetchType.LAZY)
+  - it is way to tell JPA when to execute query
+
+## Fetch Modes
+  - JPA ignores fetch mode
+  - N+1 problem
+  - It is way to tell JPA how to execute query
+
+## Schema Migration
+  - we might want to have controller over how the tables are created/what tables are created.
+  - version history of schema
+  - Don't just push the code, also push changes in the schema
+  - There are multiple reasons to have versioning of Database schema as well.
+  - Along with every code change also push the changes in schema
+  - Flyway
+
+
+
+
+
+
+
+
+## JPA Buddy plugin for easy database management
