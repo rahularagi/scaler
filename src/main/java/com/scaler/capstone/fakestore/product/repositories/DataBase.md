@@ -129,4 +129,5 @@ public | tpc_user       | table | rahul
   - 2 ways to fetch attributes of child class
   - Eager fetch --> fetch the attributes along with main object
   - Lazy fetch  --> Don't fetch the object attributes while fetching the main object
-  - 
+  - @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE},fetch = FetchType.EAGER)
+  - @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE},fetch = FetchType.LAZY)

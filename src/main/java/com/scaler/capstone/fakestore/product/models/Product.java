@@ -13,7 +13,7 @@ public class Product{
     private Long id;
     private String title;
     private double price;
-    @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
+    @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE},fetch = FetchType.EAGER)
     private Category category;
     private String description;
     private String imageUrl;
