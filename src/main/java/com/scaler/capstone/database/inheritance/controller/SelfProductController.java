@@ -1,8 +1,8 @@
 package com.scaler.capstone.database.inheritance.controller;
 
-import com.scaler.capstone.fakestore.product.dto.FakeStoreProductDto;
-import com.scaler.capstone.fakestore.product.models.Category;
-import com.scaler.capstone.fakestore.product.services.ProductService;
+import com.scaler.capstone.database.inheritance.dtos.SelfProductDto;
+import com.scaler.capstone.database.inheritance.models.Category;
+import com.scaler.capstone.database.inheritance.services.ProductService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,12 +18,12 @@ public class SelfProductController {
     ProductService productService;
     //ToDo : Need implement all other fakestore apis flow to database 7 apis
 
-    public SelfProductController(@Qualifier("selfProductService") ProductService productService){
+    public SelfProductController(@Qualifier("selfProductService")ProductService productService){
         this.productService = productService;
     }
 
     @PostMapping("/product")
-    public ResponseEntity<FakeStoreProductDto> addNewProduct(@RequestBody FakeStoreProductDto product){
+    public ResponseEntity<SelfProductDto> addNewProduct(@RequestBody SelfProductDto product){
         return new ResponseEntity<>(productService.addNewProduct(product), HttpStatus.OK);
     }
 

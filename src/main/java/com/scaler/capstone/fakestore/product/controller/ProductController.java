@@ -2,7 +2,7 @@ package com.scaler.capstone.fakestore.product.controller;
 
 import com.scaler.capstone.fakestore.product.dto.FakeStoreProductDto;
 import com.scaler.capstone.fakestore.product.models.Product;
-import com.scaler.capstone.fakestore.product.services.ProductService;
+import com.scaler.capstone.fakestore.product.services.FakeFetchProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
@@ -14,26 +14,26 @@ import java.util.List;
 @RestController
 @RequestMapping("/products")
 public class ProductController {
-    private ProductService productService;
+    private FakeFetchProductService fakeFetchProductService;
     @Autowired
-    public ProductController(@Qualifier("selfProductService") ProductService productService){
-        this.productService = productService;
+    public ProductController(@Qualifier("fakeStoreProductService") FakeFetchProductService fakeFetchProductService){
+        this.fakeFetchProductService = fakeFetchProductService;
     }
 
     @GetMapping("/")
     public ResponseEntity<List<Product>> getAllProducts(){
-        return new ResponseEntity<>(productService.getAllProducts(), HttpStatus.OK);
+        return new ResponseEntity<>(fakeFetchProductService.getAllProducts(), HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
     public Product getSingleProduct(@PathVariable("id") long id){
-        return productService.getSingleProduct(id);
+        return fakeFetchProductService.getSingleProduct(id);
     }
 
     @PostMapping("/add")
     public FakeStoreProductDto addNewProduct(@RequestBody FakeStoreProductDto product){
 
-        return productService.addNewProduct(product);
+        return fakeFetchProductService.addNewProduct(product);
     }
 
     @PatchMapping("/{id}")

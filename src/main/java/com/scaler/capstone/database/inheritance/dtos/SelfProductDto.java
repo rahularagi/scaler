@@ -1,15 +1,15 @@
-package com.scaler.capstone.fakestore.product.models;
+package com.scaler.capstone.database.inheritance.dtos;
 
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
 @Setter
-public class Product{
+@Getter
+public class SelfProductDto {
     private Long id;
     private String title;
     private double price;
-    private Category category;
+    private String category;
     private String description;
-    private String imageUrl;
+    private String image;
 }

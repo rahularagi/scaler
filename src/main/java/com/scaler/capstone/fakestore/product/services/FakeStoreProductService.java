@@ -10,9 +10,9 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
-@Service
+@Service("fakeStoreProductService")
 @Log4j2
-public class FakeStoreProductService implements ProductService{
+public class FakeStoreProductService implements FakeFetchProductService {
 
     private RestTemplate restTemplate;
 

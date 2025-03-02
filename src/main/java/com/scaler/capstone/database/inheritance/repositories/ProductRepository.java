@@ -1,7 +1,7 @@
 package com.scaler.capstone.database.inheritance.repositories;
 
+import com.scaler.capstone.database.inheritance.models.Product;
 import com.scaler.capstone.database.inheritance.repositories.projections.ProductWithIdAndTitle;
-import com.scaler.capstone.fakestore.product.models.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

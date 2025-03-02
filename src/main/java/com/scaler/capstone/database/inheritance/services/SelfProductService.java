@@ -1,18 +1,16 @@
 package com.scaler.capstone.database.inheritance.services;
 
+import com.scaler.capstone.database.inheritance.dtos.SelfProductDto;
+import com.scaler.capstone.database.inheritance.models.Product;
+import com.scaler.capstone.database.inheritance.models.Category;
 import com.scaler.capstone.database.inheritance.repositories.CategoryRepository;
 import com.scaler.capstone.database.inheritance.repositories.ProductRepository;
-import com.scaler.capstone.fakestore.product.dto.FakeStoreProductDto;
-import com.scaler.capstone.fakestore.product.models.Category;
-import com.scaler.capstone.fakestore.product.models.Product;
-import com.scaler.capstone.fakestore.product.services.ProductService;
-import jakarta.persistence.ManyToOne;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service("selfProductService")
-public class SelfProductService implements ProductService {
+public class SelfProductService implements ProductService{
     private ProductRepository productRepository;
     private CategoryRepository categoryRepository;
 
@@ -21,14 +19,13 @@ public class SelfProductService implements ProductService {
         this.productRepository = productRepository;
         this.categoryRepository = categoryRepository;
     }
-
     @Override
     public Product getSingleProduct(Long id) {
         return null;
     }
 
     @Override
-    public FakeStoreProductDto addNewProduct(FakeStoreProductDto product) {
+    public SelfProductDto addNewProduct(SelfProductDto product) {
         Category category = categoryRepository.getByName(product.getCategory());
         Product productEntity = new Product();
         productEntity.setTitle(product.getTitle());
@@ -38,7 +35,7 @@ public class SelfProductService implements ProductService {
         productEntity.setImageUrl(productEntity.getImageUrl());
 
         Product productResponse = productRepository.save(productEntity);
-        FakeStoreProductDto response =new FakeStoreProductDto();
+        SelfProductDto response =new SelfProductDto();
         response.setId(productResponse.getId());
         response.setTitle(productResponse.getTitle());
         response.setCategory(productResponse.getCategory().getName());
@@ -48,6 +45,7 @@ public class SelfProductService implements ProductService {
         return response;
     }
 
+    @Override
     public Category addNewCategory(Category category){
         return categoryRepository.save(category);
     }
