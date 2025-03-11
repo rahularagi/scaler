@@ -33,3 +33,13 @@ user_id | role_id
 *  email, password --> validate in database email_id and password
 * User
 * id | email | password | isVerify(is_valid)|
+
+
+Hashing + salting --> Bcrypt password encoder
+.encode()
+.verify()
+bcrypt will always encode a value to a diff value.  bcrypt.encode() --> will very big string
+
+Because HTTP is stateless, we need to send all details needed to fulfil a request along with request.
+# Tokens
+# JWT
