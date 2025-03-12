@@ -43,3 +43,9 @@ bcrypt will always encode a value to a diff value.  bcrypt.encode() --> will ver
 Because HTTP is stateless, we need to send all details needed to fulfil a request along with request.
 # Tokens
 # JWT
+* self validating token 
+* via the information present in the within JWT, you can tell if token is valid or not
+# auth 2
+difference between encoding and hashing
+base 64 algorithm for encoding
+https://jwt.io/introduction
