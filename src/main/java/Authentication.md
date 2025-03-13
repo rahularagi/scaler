@@ -49,3 +49,9 @@ Because HTTP is stateless, we need to send all details needed to fulfil a reques
 difference between encoding and hashing
 base 64 algorithm for encoding
 https://jwt.io/introduction
+
+# O Auth
+* User
+* Resource server
+* Application
+* Authorization server
