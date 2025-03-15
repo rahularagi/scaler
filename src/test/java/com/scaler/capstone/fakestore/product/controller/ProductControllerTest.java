@@ -38,7 +38,7 @@ class ProductControllerTest {
         ).thenReturn(list);
 
         //act
-        ResponseEntity<List<Product>> response = productController.getAllProducts();
+        ResponseEntity<List<Product>> response = productController.getAllProducts("");
 
         //assert
         assertEquals(list.size(),response.getBody().size());

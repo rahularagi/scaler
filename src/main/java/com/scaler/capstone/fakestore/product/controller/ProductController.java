@@ -1,5 +1,6 @@
 package com.scaler.capstone.fakestore.product.controller;
 
+import com.scaler.capstone.commons.AuthenticationCommons;
 import com.scaler.capstone.fakestore.product.dto.FakeStoreProductDto;
 import com.scaler.capstone.fakestore.product.models.Product;
 import com.scaler.capstone.fakestore.product.services.FakeFetchProductService;
@@ -15,13 +16,15 @@ import java.util.List;
 @RequestMapping("/products")
 public class ProductController {
     private FakeFetchProductService fakeFetchProductService;
+    private AuthenticationCommons authenticationCommons;
     @Autowired
-    public ProductController(@Qualifier("fakeStoreProductService") FakeFetchProductService fakeFetchProductService){
+    public ProductController(@Qualifier("fakeStoreProductService") FakeFetchProductService fakeFetchProductService,AuthenticationCommons authenticationCommons){
         this.fakeFetchProductService = fakeFetchProductService;
+        this.authenticationCommons = authenticationCommons;
     }
 
     @GetMapping("/")
-    public ResponseEntity<List<Product>> getAllProducts(){
+    public ResponseEntity<List<Product>> getAllProducts(@RequestHeader("AuthenticationToken") String token){
         return new ResponseEntity<>(fakeFetchProductService.getAllProducts(), HttpStatus.OK);
     }
 
