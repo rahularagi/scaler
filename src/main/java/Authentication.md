@@ -55,3 +55,11 @@ https://jwt.io/introduction
 * Resource server
 * Application
 * Authorization server
+
+
+# oauth2 references
+* https://docs.spring.io/spring-authorization-server/reference/getting-started.html
+* https://docs.spring.io/spring-authorization-server/reference/guides/how-to-jpa.html
+* https://docs.spring.io/spring-authorization-server/reference/guides/how-to-custom-claims-authorities.html
+* https://bcrypt-generator.com/
+* https://jwt.io/

@@ -24,7 +24,7 @@ public class ProductController {
     }
 
     @GetMapping("/")
-    public ResponseEntity<List<Product>> getAllProducts(@RequestHeader("AuthenticationToken") String token){
+    public ResponseEntity<List<Product>> getAllProducts(/*@RequestHeader("AuthenticationToken") String token*/){
         return new ResponseEntity<>(fakeFetchProductService.getAllProducts(), HttpStatus.OK);
     }
 
